@@ -1,0 +1,23 @@
+{
+  "name": "profile-generator",
+  "version": "1.0.0",
+  "description": "Profile Generatory, Homework 7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmclaugh28GH/Profile-Generator.git"
+  },
+  "author": "Brian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmclaugh28GH/Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/bmclaugh28GH/Profile-Generator#readme",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "inquirer": "^7.0.3"
+  }
+}
