@@ -5,6 +5,7 @@ const inquirer = require("inquirer");
 const axios = require("axios");
 const myDS = require("./dataStructures");
 const fs = require ('fs'); 
+const convertFactory = require('electron-html-to');
 
 let name; 
 let numFollowers;
@@ -161,6 +162,25 @@ inquirer
 
                if (err) {
                   return console.log(err);
+               }
+               else {
+
+                  var conversion = convertFactory({
+                     converterPath: convertFactory.converters.PDF
+                  });
+                
+                  //conversion({ html: '<h1>Hello World</h1>' }, function(err, result) {
+                  conversion({ url: './index.html' }, function(err, result) {
+                     if (err) {
+                        return console.error(err);
+                     }
+                
+                     console.log(result.numberOfPages);
+                     console.log(result.logs);
+                     result.stream.pipe(fs.createWriteStream('index.pdf'));
+                     conversion.kill(); // necessary if you use the electron-server strategy, see bellow for details
+                  });
+
                }
             });
 
