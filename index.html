@@ -1,0 +1,86 @@
+ 
+            <!DOCTYPE html>
+            <html lang="en">
+            <!-- **************************************** -->
+            <!-- **************************************** -->
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+              <title>Brian McLaughlin</title>
+              <!--css links-->
+              <link rel="stylesheet" type="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/popper.min.js">
+              <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+              <style>
+                  body{
+                    background-color:ivory;
+                  }
+                  .jumbotron{
+                    background-color: ivory;
+                  }
+                  img{
+                    height: 250px;
+                  }
+                  #map {
+                    height: 250px;
+                  }
+              </style>
+            </head>
+            <!-- **************************************** -->
+            <!-- **************************************** -->
+            <body>
+              <div class="container">
+                  <!--jumbotron-->
+                  <div class="jumbotron">
+                    <h2 class="text-center">Brian McLaughlin</h2>
+                    <hr>
+                    <h4 class="text-center">Silver Spring, MD</h4> 
+                    <h4 class="text-center">bmclaugh28GH</h4>
+                    <h4 class="text-center">Email:null</h4>
+                    <!--<h4 class="text-center">C: 240 271 4891</h4>
+                    <h4 class="text-center">H: 301 592 0076</h4>-->
+                  </div> <!--jumbotron-->
+                  <div class="row">
+                    <div class="col-lg-4">
+                        <img src=https://avatars2.githubusercontent.com/u/53011586?v=4 alt="Image not found">
+                        <p>I'm a software developer living and working in the DC metro area. I currently focus on Oracle and PL/SQL, but am learning full stack web technologies</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="map"></div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3">
+                        <h3><a href=https://github.com/bmclaugh28GH target="_blank">Brian McLaughlin's Website</a></h3>
+                        <h3>Repos: 17</h3>
+                        <h3>Followed by: 1</h3>
+                        <h3>Following: 3</h3>
+                        <h3>Blog: </h3>
+                    </div>
+                  </div>
+              </div> <!-- container -->
+              <script>
+                  var map;
+                  function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 38.99066570000001, lng: -77.026088},
+                    zoom: 14
+                  });
+                  }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALW6Hbq5zs6NOucgAOkeKIU6-kMFfBEBM&callback=initMap"
+                  async defer></script>
+              <!--**************************************-->
+              <!--js links-->
+              <!--**************************************-->
+              <script src="https://code.jquery.com/jquery.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+              <script src="./assets/script/script.js"></script>
+
+            <!-- **************************************** -->
+            <!-- **************************************** -->
+            </body>
+            </html>
+            
