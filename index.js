@@ -168,19 +168,23 @@ inquirer
                   var conversion = convertFactory({
                      converterPath: convertFactory.converters.PDF
                   });
-                
-                  //conversion({ html: '<h1>Hello World</h1>' }, function(err, result) {
-                  conversion({ url: './index.html' }, function(err, result) {
-                     if (err) {
-                        return console.error(err);
-                     }
-                
-                     console.log(result.numberOfPages);
-                     console.log(result.logs);
-                     result.stream.pipe(fs.createWriteStream('index.pdf'));
-                     conversion.kill(); // necessary if you use the electron-server strategy, see bellow for details
-                  });
+                  
+                  fs.readFile("index.html","utf-8",(error,data)=>{
+                        if (err) throw err;
+                    
+                      //conversion({ html: '<h1>Hello World</h1>' }, function(err, result) {
+                      conversion({ html: data}, function(err, result) {
+                        if (err) {
+                            return console.error(err);
+                        }
+                      
+                        console.log(result.numberOfPages);
+                        console.log(result.logs);
+                        result.stream.pipe(fs.createWriteStream('index.pdf'));
+                        conversion.kill(); // necessary if you use the electron-server strategy, see bellow for details
+                      });
 
+                  })
                }
             });
 
