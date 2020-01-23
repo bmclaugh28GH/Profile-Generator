@@ -30,5 +30,6 @@ The code will add data dynamically to HTML using template literals, and will wri
    message: 'Worker Timeout, the worker process does not respond after 10000 ms',
    electronTimeout: true
 
+   200122: Nvm! With help from Sabrina and Eugene I installed the correct version of electron; it seems to be working now. Although the PDF didn't seem to be grabbing the background color I entered. 
 
 3) I got an email about checking my code into Github with a Google api key in it. Is that bad? Is there another way to do that? 
